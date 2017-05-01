@@ -99,6 +99,9 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install php7.0
 
+#then continue to install php7.0/nginx/mysql
+#https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
+
 # echo 'Install MySql...'
 # echo "------------------------"
 # sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
