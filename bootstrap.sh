@@ -86,6 +86,12 @@ sudo apt-get install apache2 -y
 # echo "------------------------"
 # sudo apt-get install php5 -y
 
+# echo 'Install PHP 7.0...'
+# 'https://www.digitalocean.com/community/tutorials/how-to-upgrade-to-php-7-on-ubuntu-14-04'
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install php7.0
+
 # echo 'Install MySql...'
 # echo "------------------------"
 # sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
