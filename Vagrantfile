@@ -26,7 +26,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.network :forwarded_port, guest: 80, host: 8080
   config.vm.network :forwarded_port, guest: 8080, host: 8080
   
-  # set this user for ssh login
+  # set this user for ssh login -- 05/01/17
   config.ssh.username = "ubuntu"
 
   # Create a private network, which allows host-only access to the machine
