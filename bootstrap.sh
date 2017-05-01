@@ -121,7 +121,7 @@ echo "------------------------"
 #wget -c http://dbeaver.jkiss.org/files/dbeaver_2.4.0_amd64.deb -P /tmp
 #sudo dpkg -i /tmp/dbeaver_2.4.0_amd64.deb
 
-wget -c http://dbeaver.jkiss.org/files/4.0.5/dbeaver-ee_4.0.5_amd64.deb
+wget -c http://dbeaver.jkiss.org/files/4.0.5/dbeaver-ee_4.0.5_amd64.deb -P /tmp
 sudo dpkg -i /tmp/dbeaver-ee_4.0.5_amd64.deb
 sudo apt-get install -f
 rm /tmp/dbeaver*.deb
