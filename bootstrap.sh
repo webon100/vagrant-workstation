@@ -78,9 +78,16 @@ tar xzf /tmp/apache-tomcat*.tar.gz -C /home/vagrant/Development/
 rm /tmp/apache-tomcat*.tar.gz
 
 # http://localhost/
-echo 'Install Apache2...'
+#echo 'Install Apache2...'
+#echo "------------------------"
+#sudo apt-get install apache2 -y
+# if apache2 exist, need to stop first then install Nginx or just simply remove the Apache2 completelly -- 05/01/17
+
+# http://localhost/
+echo 'Install Nginx...'
 echo "------------------------"
-sudo apt-get install apache2 -y
+sudo apt-get update
+sudo apt-get install nginx -y
 
 # echo 'Install PHP 5...'
 # echo "------------------------"
