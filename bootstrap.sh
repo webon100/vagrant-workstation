@@ -155,6 +155,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # chsh: user 'vagrant' does not exist ???
 sudo chsh -s /bin/zsh vagrant
 
+#--- continue manually do this on office pc --- 05/01/17
+
 sudo zsh
 sudo chown vagrant:vagrant /home/vagrant/.zshrc
 sudo chown -R vagrant:vagrant /home/vagrant/.oh-my-zsh
