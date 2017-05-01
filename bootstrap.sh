@@ -14,9 +14,11 @@ xarchiver filezilla synaptic curl vim wget
 echo 'Install VB addon and x11 display'
 sudo apt-get -y --force-yes --no-install-recommends install virtualbox-guest-utils virtualbox-guest-x11 virtualbox-guest-dkms
 
-echo 'Set New York timezone...'
+#echo 'Set New York timezone...'
+echo 'Set Los_Angeles...'
 echo "------------------------"
-echo "America/New_York" | sudo tee /etc/timezone
+#echo "America/New_York" | sudo tee /etc/timezone
+echo "America/Los_Angeles" | sudo tee /etc/timezone
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 echo 'Set English keyboard layout...'
@@ -61,10 +63,12 @@ tar xzf /tmp/spring-tool-suite-*-linux-gtk*.tar.gz -C /home/vagrant/Development/
 # sudo mv /tmp/eclipse.desktop /usr/share/applications/
 # rm /tmp/eclipse-jee-*-linux-gtk*.tar.gz
 
-echo 'Install Tomcat 8.0.35...'
+#echo 'Install Tomcat 8.0.35...'
+echo 'Install Tomcat 8.5.14...'
 echo "------------------------"
 # wget http://archive.apache.org/dist/tomcat/tomcat-7/v7.0.39/bin/apache-tomcat-7.0.39.tar.gz -P /tmp
-wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.35/bin/apache-tomcat-8.0.35.tar.gz -P /tmp
+# wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.35/bin/apache-tomcat-8.0.35.tar.gz -P /tmp
+wget http://archive.apache.org/dist/tomcat/tomcat-8/v8.5.14/bin/apache-tomcat-8.5.14.tar.gz -P /tmp
 tar xzf /tmp/apache-tomcat*.tar.gz -C /home/vagrant/Development/
 rm /tmp/apache-tomcat*.tar.gz
 
