@@ -53,8 +53,8 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 echo 'Create Development directory...'
 echo "------------------------"
-mkdir /home/vagrant/Development
-mkdir /home/vagrant/Development/git
+sudo mkdir /home/vagrant/Development
+sudo mkdir /home/vagrant/Development/git
 sudo chmod 777 -R /home/vagrant/Development/
 
 echo 'Install Spring Tool Suite based on Eclipse 4.6...'
