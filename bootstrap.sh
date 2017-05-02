@@ -2,7 +2,7 @@
 
 echo 'Update packages list...'
 echo "------------------------"
-apt-get -y update
+sudo apt-get -y update
 
 # reminder - keyword and mouse may not work under win10 if do this ?
 echo 'Install Xubuntu Desktop & co...'
