@@ -18,7 +18,7 @@ sudo apt-get -y --force-yes --no-install-recommends install virtualbox-guest-uti
 # error to install virtualbox-guest-x11, then do the following way -- 05/01/17
 sudo apt-get remove libcheese-gtk23
 sudo apt-get install xserver-xorg-core -y
-sudo apt-get install -f virtualbox-guest-x11
+sudo apt-get install -f virtualbox-guest-x11 -y
 
 #echo 'Set New York timezone...'
 echo 'Set Los_Angeles...'
