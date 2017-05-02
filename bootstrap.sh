@@ -27,6 +27,8 @@ echo "------------------------"
 echo "America/Los_Angeles" | sudo tee /etc/timezone
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
+
+# reminder -- may cause keyboard not response under win 10 - ubuntu16.04 ?
 echo 'Set English keyboard layout...'
 echo "------------------------"
 sudo sed -i 's/XKBLAYOUT="us"/g' /etc/default/keyboard
