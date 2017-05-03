@@ -8,7 +8,7 @@ sudo apt-get -y update
 echo 'Install Xubuntu Desktop & co...'
 echo "------------------------"
 export DEBIAN_FRONTEND=noninteractive
-apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad xubuntu-icon-theme \
+sudo apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad xubuntu-icon-theme \
 xfce4-goodies xubuntu-wallpapers gksu cifs-utils xfce4-whiskermenu-plugin firefox \
 xarchiver filezilla synaptic curl vim wget
 
