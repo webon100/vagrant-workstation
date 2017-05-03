@@ -4,7 +4,7 @@ echo 'Update packages list...'
 echo "------------------------"
 sudo apt-get -y update
 
-# reminder - keyword and mouse may not work under win10 if do this ?
+# reminder - keyword and mouse may not work under win10-ubuntu1604 if do this ?
 echo 'Install Xubuntu Desktop & co...'
 echo "------------------------"
 export DEBIAN_FRONTEND=noninteractive
@@ -12,6 +12,7 @@ apt-get -y --force-yes --no-install-recommends install xubuntu-desktop mousepad 
 xfce4-goodies xubuntu-wallpapers gksu cifs-utils xfce4-whiskermenu-plugin firefox \
 xarchiver filezilla synaptic curl vim wget
 
+# reminder - keyword and mouse may not work under win10-ubuntu1604 if do this ?
 echo 'Install VB addon and x11 display'
 sudo apt-get -y --force-yes --no-install-recommends install virtualbox-guest-utils virtualbox-guest-x11 virtualbox-guest-dkms
 
@@ -28,7 +29,7 @@ echo "America/Los_Angeles" | sudo tee /etc/timezone
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 
-# reminder -- may cause keyboard not response under win 10 - ubuntu16.04 ?
+# reminder - keyword and mouse may not work under win10-ubuntu1604 if do this ?
 echo 'Set English keyboard layout...'
 echo "------------------------"
 sudo sed -i 's/XKBLAYOUT="us"/g' /etc/default/keyboard
