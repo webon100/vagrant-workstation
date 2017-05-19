@@ -103,7 +103,7 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install php7.0
 sudo apt-get install php7.0-fpm
-sudo apt-get install php7.0-mysql
+#sudo apt-get install php7.0-mysql
 
 #then continue to install php7.0/nginx/mysql
 #https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
