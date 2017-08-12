@@ -47,7 +47,8 @@ sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update -y
 sudo echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 sudo echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-sudo apt-get install -y oracle-jdk8-installer -y
+#sudo apt-get install -y oracle-jdk8-installer -y
+sudo apt-get install -y oracle-java8-installer -y  #change like this
 sudo apt-get install oracle-java8-set-default -y
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
 export PATH=$JAVA_HOME/bin:$PATH
