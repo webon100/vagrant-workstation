@@ -215,6 +215,7 @@ sudo apt-get -f install -y
 rm /tmp/chefdk*.deb
 
 # recommend pyenv to manage multi-enviorment, DO NOT touch system files.
+# the way works for bashrc
 # ----------------------
 sudo apt-get install -y build-essential libbz2-dev libssl-dev libreadline-dev libsqlite3-dev tk-dev
 # optional scientific package headers (for Numpy, Matplotlib, SciPy, etc.)
