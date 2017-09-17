@@ -47,7 +47,7 @@ sudo add-apt-repository ppa:webupd8team/java -y
 sudo apt-get update -y
 sudo echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
 sudo echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-#sudo apt-get install -y oracle-jdk8-installer -y
+# sudo apt-get install -y oracle-jdk8-installer -y
 sudo apt-get install -y oracle-java8-installer -y  #change like this
 sudo apt-get install oracle-java8-set-default -y
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle/
@@ -104,10 +104,12 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
 sudo apt-get install php7.0
 sudo apt-get install php7.0-fpm
-#sudo apt-get install php7.0-mysql
+# sudo apt-get install php7.0-mysql
 
-#then continue to install php7.0/nginx/mysql
-#https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
+# then continue to install php7.0/nginx/mysql
+# https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
+
+# Mysql may install v5.7 rather than v5.6 - 09/17/17
 
 # echo 'Install MySql...'
 # echo "------------------------"
@@ -212,20 +214,37 @@ sudo dpkg -i /tmp/chefdk*.deb
 sudo apt-get -f install -y
 rm /tmp/chefdk*.deb
 
-#Install Python Anaconda
-echo 'Installing Anaconda 2-4.0.0'
-wget -q http://repo.continuum.io/archive/Anaconda2-4.0.0-Linux-x86_64.sh -P /tmp
-bash Anaconda2-4.0.0-Linux-x86_64.sh
-conda create --name py27conda2_3_0 python=2.7 anaconda=2.3.0
-source activate py27conda2_3_0
+# recommend pyenv to manage multi-enviorment, DO NOT touch system files.
+# ----------------------
+sudo apt-get install -y build-essential libbz2-dev libssl-dev libreadline-dev libsqlite3-dev tk-dev
+# optional scientific package headers (for Numpy, Matplotlib, SciPy, etc.)
+# sudo apt-get install -y libpng-dev libfreetype6-dev 
 
-#Install PIP
-sudo apt-get -f install python-pip -y
+# run install script
+curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 
-#Install Flask Excel
-echo 'Install Flask Excel'
-pip install Flask-Excel
-pip install pyexcel-xlsx
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# reload the script
+source ~/.bashrc
+# ---------------------
+
+# Install Python Anaconda
+# echo 'Installing Anaconda 2-4.0.0'
+# wget -q http://repo.continuum.io/archive/Anaconda2-4.0.0-Linux-x86_64.sh -P /tmp
+# bash Anaconda2-4.0.0-Linux-x86_64.sh
+# conda create --name py27conda2_3_0 python=2.7 anaconda=2.3.0
+# source activate py27conda2_3_0
+
+# Install PIP
+# sudo apt-get -f install python-pip -y
+
+# Install Flask Excel
+# echo 'Install Flask Excel'
+# pip install Flask-Excel
+# pip install pyexcel-xlsx
 
 # Change ownership
 sudo chown -hR vagrant:vagrant ~/Development
