@@ -94,17 +94,13 @@ echo "------------------------"
 sudo apt-get update
 sudo apt-get install nginx -y
 
-# echo 'Install PHP 5...'
-# echo "------------------------"
-# sudo apt-get install php5 -y
-
-# echo 'Install PHP 7.0...'
-# 'https://www.digitalocean.com/community/tutorials/how-to-upgrade-to-php-7-on-ubuntu-14-04'
-sudo add-apt-repository ppa:ondrej/php
-sudo apt-get update
-sudo apt-get install php7.0
-sudo apt-get install php7.0-fpm
-# sudo apt-get install php7.0-mysql
+# echo "Install PHP 7.0 packages."
+# sudo apt-get update -y
+# sudo apt-get -y --force-yes install php7.0 php7.0-fpm php7.0-fpm php7.0-mysql \
+# php7.0-mbstring mcrypt libmcrypt-dev php7.0-mcrypt \
+# php7.0-cli php7.0-common php7.0-curl php7.0-gd php7.0-intl php7.0-json \
+# php7.0-opcache php7.0-readline php7.0-xml php7.0-soap
+# sudo service php7.0-fpm restart -y
 
 # then continue to install php7.0/nginx/mysql
 # https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-in-ubuntu-16-04
@@ -213,24 +209,6 @@ wget -q "https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/c
 sudo dpkg -i /tmp/chefdk*.deb
 sudo apt-get -f install -y
 rm /tmp/chefdk*.deb
-
-# recommend pyenv to manage multi-enviorment, DO NOT touch system files.
-# the way works for bashrc
-# ----------------------
-sudo apt-get install -y build-essential libbz2-dev libssl-dev libreadline-dev libsqlite3-dev tk-dev
-# optional scientific package headers (for Numpy, Matplotlib, SciPy, etc.)
-# sudo apt-get install -y libpng-dev libfreetype6-dev 
-
-# run install script
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-
-export PATH="~/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# reload the script
-source ~/.bashrc
-# ---------------------
 
 # Install Python Anaconda
 # echo 'Installing Anaconda 2-4.0.0'
